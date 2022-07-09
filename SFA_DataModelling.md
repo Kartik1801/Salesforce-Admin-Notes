@@ -1,24 +1,24 @@
 # Data Modelling
-    ## Objects:
+    > Objects:
     - In Salesforce, data is stored in form of objects (table).
     - Each object consists of a no of fields (columns).
     - Data is stored in form of records(row) of object.
 
-        ### Standard Objects (included with SF.)
-        ### Custom Objects
+        # Standard Objects (included with SF.)
+        # Custom Objects
     
-    ## Apps (UI functionality): 
+    > Apps (UI functionality): 
     - App is just a collection of Name, logo and tab.
-        ### standard App
-        ### custom  App
+        # standard App
+        # custom  App
 
-    ## Tab:
+    > Tab:
      - UI component that allow us to access a particular functionality 
     
-    ## Fields:
+    > Fields:
      - Attribute or columns.
-        ### Standard Fields
-        ### Custom Fields
+        # Standard Fields
+        # Custom Fields
 
 # Relationships: 
     - Relationship in Salesforce is a 2-way association between 2 objects. 
@@ -26,7 +26,7 @@
     
     *NOTE: Field is always created on Many Side Object*
 
-    ## Master-detail Relationship:
+    > Master-detail Relationship:
         
         - Master-Detail Relationship in Salesforce is a parent-child relationship in which the master object controls certain behaviors of the detail object.
         
@@ -47,7 +47,7 @@
      Note: Master-Detail relationship cannot be created where User or Lead objects are the master.
 
 
-    ## Lookup Relationship:
+    > Lookup Relationship:
          
         - Lookup relationship is a simple two way relationship in which there is no effect on deletion and security of the related objects.
         
@@ -55,13 +55,13 @@
 
         - When a salesforce lookup relationship is defined, data from one object can appear as a custom related list on page layouts for the other object.
         
-        - ## Self Relationship:
+        - > Self Relationship:
         
             - Self relationship is the relationship of an object with itself. i.e When an object has a lookup with itself, it is a self-relationship.
         
             - Eg. "Employee" of an organization contains a field "Report to" which refers to some other "Employee" in the same field.
         
-        - ## Hierarchial Relationship: 
+        - > Hierarchial Relationship: 
 
             - A special lookup relationship is  available for only the user object. It lets users use a lookup field to associate one user with another that does not directly or indirectly refer to itself.
 
@@ -70,7 +70,7 @@
             - eg. Hierarchy of employee(users) working in an organization.
 
 
-    ## Many-to-Many Relationship: 
+    > Many-to-Many Relationship: 
         
         - Many-to-Many relationships can be modeled using master-details relationships between any two objects. It allows each record of one object to be linked to multiple records from another object and vice versa.
 
@@ -92,7 +92,7 @@
        
         - An Object can be master of many but can be be detail of only 2.
        
-        ### Primary Relationship:
+        # Primary Relationship:
             - It is the relation created first with any of the two master objects.
             - The object with which the relationship is created first is called the primary master object.
             - The detail and edit page of the junction object will use the color and any associated icon of the primary master object.
@@ -100,7 +100,7 @@
             - The sharing and security settings of junction objects will depend on the associated master record.
             - Deleting a record of the primary object will delete the associated records of the junction object as well.
 
-        ### Secondary Relationship:
+        # Secondary Relationship:
             - The second master-detail relationship created with another master object.
             - The object with which the relationship is created first is called the secondary master object.
             - This relationship does not affect the look and feel of the junction object.
@@ -108,21 +108,21 @@
             - Deleting a record of a secondary object also deletes the associated records of the junction object.
    
               
-    ## Validation Rules: 
+    > Validation Rules: 
         - Validation rules in Salesforce verify the data a user enters in a record. The data should meet the standards specified by the organization. It can contain a formula or expression that evaluates the data in one or more fields & returns a value true or false.
 
         -Validation Rules also include an error message to display to the user when the rule returns a value true due to an invalid value/data.
 
-    ## lOOK UP FILTER: 
+    > lOOK UP FILTER: 
         - Salesforce Lookup Filter limits which records can be associated within an object relationship. It can be applied to Lookup, Master Detail, and Hierarchical Relationship Fields.
 
-    ## Formula Fields: 
+    > Formula Fields: 
 
         - Formula fields are the fields we create when the particular field's value is derived from another field value.
     
         - Formula fields are always read only.
 
-    ## Cross Object Formula Field: 
+    > Cross Object Formula Field: 
         
         - A fields value from another object or one's side object's field value onto the many side object is cross object formula field.
 
@@ -132,7 +132,7 @@
 
         - Fields can be referred up to 10 relationships away. Cross Object formulas can be used everywhere except when creating default values.
 
-    ## Roll-up Summary Fields:
+    > Roll-up Summary Fields:
         
         - Roll-Up Summary Fields are used to aggregate the data on the child record and show that data on one side record.
 
@@ -145,11 +145,3 @@
         -These can be used to display the sum, maximum, minimum value of a field in a related list, also the count of all the records listed in a related list. They are only available to master objects in a master-detail relationship.
 
         - After creating a Roll Up Summary Field on an object, the master-detail relationship cannot be converted into a lo okup relationship.
-
-
-
-### Custom Actions :
-- These are VisualForce Pages or canvas app that let users interact with or create records that have a relationship to an object record. The Visualforce page for an object-specific custom action must include the standard controller for the relevant object.
-
-
-
