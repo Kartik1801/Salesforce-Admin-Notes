@@ -1,27 +1,38 @@
 # Data Modelling
     > Objects:
+ 
     - In Salesforce, data is stored in form of objects (table).
+ 
     - Each object consists of a no of fields (columns).
+
     - Data is stored in form of records(row) of object.
 
         # Standard Objects (included with SF.)
         # Custom Objects
     
     > Apps (UI functionality): 
+
     - App is just a collection of Name, logo and tab.
+
         # standard App
         # custom  App
 
     > Tab:
+
      - UI component that allow us to access a particular functionality 
     
     > Fields:
+
      - Attribute or columns.
+
         # Standard Fields
+
         # Custom Fields
 
-# Relationships: 
+    > Relationships: 
+
     - Relationship in Salesforce is a 2-way association between 2 objects. 
+
     - Using relationships we can link objects with each other and we can make connections and display data about other related objects.
     
     *NOTE: Field is always created on Many Side Object*
@@ -109,11 +120,13 @@
    
               
     > Validation Rules: 
+
         - Validation rules in Salesforce verify the data a user enters in a record. The data should meet the standards specified by the organization. It can contain a formula or expression that evaluates the data in one or more fields & returns a value true or false.
 
         -Validation Rules also include an error message to display to the user when the rule returns a value true due to an invalid value/data.
 
     > lOOK UP FILTER: 
+
         - Salesforce Lookup Filter limits which records can be associated within an object relationship. It can be applied to Lookup, Master Detail, and Hierarchical Relationship Fields.
 
     > Formula Fields: 
@@ -142,6 +155,6 @@
     
         - Roll-Up Summary Fields in Salesforce summarize data from a set of related detail records and automatically display the output on the master record.
         
-        -These can be used to display the sum, maximum, minimum value of a field in a related list, also the count of all the records listed in a related list. They are only available to master objects in a master-detail relationship.
+        - These can be used to display the sum, maximum, minimum value of a field in a related list, also the count of all the records listed in a related list. They are only available to master objects in a master-detail relationship.
 
         - After creating a Roll Up Summary Field on an object, the master-detail relationship cannot be converted into a lo okup relationship.
