@@ -117,12 +117,70 @@
             - Send email actions: These are available only in cases. It gives users access to a simplified version of the case feed e-mail action on Salesforce1.
 
 
+## Record Types:
+
+    > Record Types controls the page layout and picklist values that should be available while the user is creating a record of that particular record type.
+
+    > Purpose: 
+        
+        - Object Slicing : dividing a single object into multiple types. eg Student can be divided into 3 types of students: 
+          
+          - 1. Student who is currently working in some organization = Experienced Students.
+          
+          - 2. Student who is currently studying in school / college = Fresher Student.
+          
+          - 3. Student who has graduated but has not been working in any organisation = Graduated student.
+            
+            For each of these students we may want to show different fields for different categgory of students, we can achieve this by dividing the students object into multiple parts with the help of record types and then show different page layout for each of these record type.
+
+        - Different page layouts for different profiles.
+       
+          - Generally,
+            
+                User ->-m-----1- Profile ->-m----1- Pagelayout. 
+          
+            i.e. 
+          
+              - A single user can have a single profile but one profile can be shared between multiple users.
+          
+              - Similarly, A single profile can have a single page layout and each pagelayout can be shared between multiple profiles. 
+          
+          - But with the help of record types, 
+          
+                User ->-m-----1- Profile -1---m-<- Record Types ->-m---1- Pagelayout.
+          
+            i.e.
+
+              - A user can have a single profile but one profile may be shared between multiple users.
+
+              - One profile can have multiple record type and each record type can have a single page layout.
+
+              - A single page layout may be shared between multiple record types.
+
+        - Providing or restricting access to create records of certain type ( record types ):
 
 
 
+    - Every Record Type can have multiple page layout and multiple profile but have common picklist values.
 
+         ________________________________________________
+        |                                                |
+        |               Picklist Values                  |  Picklist value is commmon for each PL(pagelayout) and PR(profile).
+        |    _______________________________________     |
+        |   |   ________             __________     |    |
+        |   |  |        |           |          |    |    |
+        |   |  | PL - 1 |           |  PL - n  |    |    |
+        |   |  |        |    ...    |          |    |    |
+        |   |  | PR - 1 |           |  PR - n  |    |    |
+        |   |  |________|           |__________|    |    |
+        |   |_______________________________________|    |
+        |                                                |
+        |________________________________________________|
+                         Record Type
 
-
+    - Record type only control the creation i.e. it can be used to restrict only the creation of object, different user might still be able to see or edit the record of different record types.
+     
+    - Whenever we create a record type for an object a new standard field called as record type is created for that object which store the information of record type used to create that record.
 
 
 
